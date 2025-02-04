@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Especial</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffebf0;
+        }
+        h1 {
+            color: #d63384;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .btn-yes {
+            background-color: #28a745;
+            color: white;
+        }
+        .btn-no {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="planos-bk.mp3" type="audio/mpeg">
+    </audio>
+    <div class="container">
+        <h1>Essa é a primeira etapa das próximas que virão, você aceita?</h1>
+        <div class="buttons">
+            <button class="btn btn-yes">Sim 💖</button>
+            <button class="btn btn-no" id="no">Não 😢</button>
+        </div>
+    </div>
+    <script>
+        const noButton = document.getElementById('no');
+        noButton.addEventListener('mouseover', function () {
+            const x = Math.random() * window.innerWidth - 100;
+            const y = Math.random() * window.innerHeight - 50;
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
